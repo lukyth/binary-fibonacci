@@ -13,8 +13,9 @@ Output = output.txt
 
 output.txt: cFibo.class
 	$(Run) $(Filename) >> $(Output)
+	cat $(Output)
 
 # The main.o target can be written more simply
 
 cFibo.class: cFibo.java
-	$(Complie) $(Filename).java
+	javac cFibo.java
